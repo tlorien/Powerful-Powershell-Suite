@@ -12,10 +12,27 @@ To see the scripts in action try out the template powershell profile script that
 ## Scripts
 
 ### 1. Mario Animation
-A little script that plays an animation of Mario in your PowerShell console. A fun way to initialize new sessions.
+A little script that plays an animation of Mario in your PowerShell console. A fun way to initialize new sessions. import the modules and call 'Draw-Mario' to play the animation.
 
 ### 2. Network Device Scanner
-Contains a function that can quickly scan your network for devices and displays the results. Useful for network administrators or anyone curious about active devices on their network.
+A network scanning tool designed to detect active devices on a specified subnet. The script pings each IP address within a given range and reports on devices that are active or inactive. Additionally, it can export the scan results to a CSV file for further analysis.
+
+  #### Usage
+  ```powershell
+  -Subnet: The subnet to scan, specified in the format xxx.xxx.xxx. (default: 192.168.1.).
+  -StartIP: The starting IP address for the scan range (default: 1).
+  -EndIP: The ending IP address for the scan range (default: 254).
+  -Timeout: The timeout in milliseconds for each ping request (default: 1000 ms).
+  -OutputFile: (Optional) The file path to export the scan results in CSV format.
+  ```
+  **Example**:
+  ```powershell
+  Scan-Network
+  ```
+
+  ```powershell
+  Scan-Network -Subnet "192.168.0." -StartIP 1 -EndIP 100 -Timeout 500 -OutputFile "C:\NetworkScanResults.csv"
+  ```
 
 ### 3. Simple To-Do List
 Manage your tasks with this simple to-do list script. Add, view, and mark tasks as completed with ease. Saves tasks to your powershell profile folder and displays remaining tasks upon new sessions (can be configured to once per day or not at all).
@@ -24,12 +41,12 @@ Manage your tasks with this simple to-do list script. Add, view, and mark tasks 
 Change the theme of your PowerShell environment quickly. Customize the shell's appearance and set XML or JSON templates for neater displays of data.
 
 ### 5. Random Programming Quote
-Call random programming quotes in times of desperation—or initialize your sessions with them.
+Call random programming quotes in times of desperation—or initialize your sessions with them for inspo.
 
 ### 6. System Background Jobs
 A collection of lightweight scripts to monitor various aspects of your system, ensuring everything runs smoothly. Uses a 'MonitorJob' class to define and manage individual monitoring tasks that run at specified intervals. Each task runs as a background job and reports its status in a consolidated table for easy monitoring.
 
-The `Start-AllMonitors` function can be used in your profile script to start several background monitoring tasks:
+The `Start-AllMonitors` function can be called to start several background monitoring tasks. Include in your profile script to initialize the tasks.
 
 #### Includes:
 
@@ -47,10 +64,10 @@ The `Start-AllMonitors` function can be used in your profile script to start sev
     - Provides warnings for low or critical battery levels.
 
 ### 7. Custom Emoji Prompt
-A collection of functions to personalize the user prompt:
-  - ISO 8601 Timestamp with appropriate emojis to represent the time of day and moon phases:
+A collection of functions to personalize the command prompt with dynamic and visually engaging elements.
+
   #### Time of Day emojis:
-      Calculates the moon phase based on the current date to display an emoji representing the moon's phase:
+      Calculates the current time to display an emoji representing the hour:
         Morning (5 AM - 11:59 AM): 🌅
         Afternoon (12 PM - 4:59 PM): 🌞
         Evening (5 PM - 8:59 PM): 🌇
@@ -66,6 +83,11 @@ A collection of functions to personalize the user prompt:
         Waning Gibbous: 🌖
         Last Quarter: 🌗
         Waning Crescent: 🌘
+  #### Late Night Reminder:
+      Displays skull emojis 💀💀💀 as a reminder to rest during late night hours (12 AM - 5 AM).
 
-  - Changes the color of each new prompt randomly for easier reading; adds an ASCII art divider line.
+  #### Colour randomization:
+        Each prompt line is displayed in a randomly selected color, that does not conflict with the session's background color.
+  #### Colour randomization:
+        Separates each prompt with a visually appealing dividing line.
     
