@@ -5,7 +5,7 @@
 
 Hi! Welcome to my repository of useful and fun PowerShell scripts. This collection includes a variety of scripts to enhance your PowerShell experience, from simple animations and prompt customizations to system monitoring tools.
 
-To see the scripts in action try out the template powershell profile script that I have included.
+To see the scripts in action try out the template powershell profile script that I have included. Ensure that the module scripts are within a /scripts/ folder in the directory of your Powershell profile script.
 
 [Not sure how to use Powershell Profiles? Click here!](https://www.techtarget.com/searchwindowsserver/tutorial/How-to-find-and-customize-your-PowerShell-profile)
 
