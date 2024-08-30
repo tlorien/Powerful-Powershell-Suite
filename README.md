@@ -37,7 +37,10 @@ The `Start-AllMonitors` function can be used in your profile script to start sev
   - **System Health Monitor**: Maintains a watch list of processes critical to Windows system health (defined by the user; defaults to 'wuauserv' and 'bits'). Periodically checks in on the system health services (checks every 5 minutes) by retrieving the list and checking if any are missing. Alerts the user of missing services.
   - **Temperature Monitor**: Periodically checks on CPU and GPU temperatures (checks every 5 minutes). If temperatures exceed 80°C an alert message is displayed in the console.
   - **Battery Status Monitor**:
-    - Checks if your device uses a battery; starts a monitoring process if it does. Starts a lightweight monitoring process that modifies the user prompt to include emojis representing the remaining battery life: 🔋 (Full), 🟢 (High), 🟡 (Moderate), 🟠 (Low), 🔴 (Very Low), ⚠️ (Critically Low).
+    - Checks if your device uses a battery; starts a monitoring process if it does. Starts a lightweight monitoring process that modifies the user prompt to include emojis representing the remaining battery life:
+      ```
+      🔋 (Full), 🟢 (High), 🟡 (Moderate), 🟠 (Low), 🔴 (Very Low), ⚠️ (Critically Low).
+      
     - Displays periodic warning messages when the battery is critically low, 'CRITICAL BATTERY LEVEL! BATTERY BELOW $criticalBatteryThreshold%! PLUG IN CHARGER!'.
 
 ### 7. Custom Emoji Prompt
