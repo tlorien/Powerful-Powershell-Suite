@@ -1,5 +1,7 @@
 # Powerful-Powershell-Suite
 
+![Header](assets/img/2024-08-30 10-30-30_1.gif)
+
 Hi! Welcome to my repository of useful and fun PowerShell scripts. This collection includes a variety of scripts to enhance your PowerShell experience, from simple animations and prompt customizations to system monitoring tools.
 
 To see the scripts in action try out the template powershell profile script that I have included.
