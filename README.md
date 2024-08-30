@@ -45,7 +45,7 @@ The `Start-AllMonitors` function can be used in your profile script to start sev
 
 ### 7. Custom Emoji Prompt
 A collection of functions to personalize the user prompt:
-  - Timestamp with appropriate appropriate to represent the time of day and moon phases:
+  - ISO 8601 Timestamp with appropriate emojis to represent the time of day and moon phases:
   #### Time of Day emojis:
       Calculates the moon phase based on the current date to display an emoji representing the moon's phase:
         Morning (5 AM - 11:59 AM): 🌅
