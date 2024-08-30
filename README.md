@@ -27,24 +27,24 @@ Change the theme of your PowerShell environment quickly. Customize the shell's a
 Call random programming quotes in times of desperation—or initialize your sessions with them.
 
 ### 6. System Background Jobs
-A collection of lightweight scripts to monitor various aspects of your system, ensuring everything runs smoothly. 
+A collection of lightweight scripts to monitor various aspects of your system, ensuring everything runs smoothly. Uses a 'MonitorJob' class to define and manage individual monitoring tasks that run at specified intervals. Each task runs as a background job and reports its status in a consolidated table for easy monitoring.
 
 The `Start-AllMonitors` function can be used in your profile script to start several background monitoring tasks:
 
 #### Includes:
 
-  - **CPU Monitor**: Periodically checks on CPU usage (checks every 5 minutes). If CPU usage exceed 80% an alert message is displayed in the console.
-  - **Memory Monitor**: Periodically checks on memory usage (checks every 5 minutes). If memory usage exceed 80% an alert message is displayed in the console.
-  - **Disk Space Monitor**: Periodically checks on the remaining disk space (checks every 60 minutes).
-  - **Process Monitor**: Maintains a watch list of critical processes (defined by the user). Periodically checks in on the critical processes (checks every 5 minutes) by retrieving the list and checking if any are missing. Alerts the user of missing processes.
-  - **System Health Monitor**: Maintains a watch list of processes critical to Windows system health (defined by the user; defaults to 'wuauserv' and 'bits'). Periodically checks in on the system health services (checks every 5 minutes) by retrieving the list and checking if any are missing. Alerts the user of missing services.
-  - **Temperature Monitor**: Periodically checks on CPU and GPU temperatures (checks every 5 minutes). If temperatures exceed 80°C an alert message is displayed in the console.
+  - **CPU Monitor**: Checks the average CPU load every 5 minutes and triggers an alert if the load exceeds 80%.
+  - **Memory Monitor**: Monitors memory usage every 5 minutes and triggers an alert if the usage exceeds 80%.
+  - **Disk Space Monitor**: Monitors disk space availability every hour and alerts if any drive's free space falls below 20 GB.
+  - **Process Monitor**: Maintains a watch list of critical processes (defined by the user). Monitors the presence of the specified critical processes every 5 minutes and alerts if any are not running.
+  - **System Health Monitor**: Maintains a watch list of processes critical to Windows system health (defined by the user; defaults to 'wuauserv' and 'bits'). Checks the status of critical Windows services every 10 minutes and alerts if any are not running.
+  - **Temperature Monitor**: Monitors CPU and GPU temperatures every 5 minutes and triggers an alert if temperatures exceed 80°C.
   - **Battery Status Monitor**:
-    - Checks if your device uses a battery; starts a monitoring process if it does. Starts a lightweight monitoring process that modifies the user prompt to include emojis representing the remaining battery life:
+    - Checks if your device uses a battery; starts a monitoring process if it does. Monitors battery level every 10 minutes, displays a battery emoji:
       ```
       🔋 (Full), 🟢 (High), 🟡 (Moderate), 🟠 (Low), 🔴 (Very Low), ⚠️ (Critically Low).
       
-    - Displays periodic warning messages when the battery is critically low, 'CRITICAL BATTERY LEVEL! BATTERY BELOW $criticalBatteryThreshold%! PLUG IN CHARGER!'.
+    - Provides warnings for low or critical battery levels.
 
 ### 7. Custom Emoji Prompt
 A collection of functions to personalize the user prompt:
