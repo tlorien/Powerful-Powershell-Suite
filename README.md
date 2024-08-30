@@ -1,4 +1,4 @@
-![Header](assets/img/2024-08-30_10-30-30_1.gif)
+![Header](https://github.com/tlorien/Powerful-Powershell-Suite/blob/main/assets/img/2024-08-30%2010-30-30_1.gif)
 
 
 # Powerful-Powershell-Suite
